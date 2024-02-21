@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contador Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <style>
+        #app {
+            font-family: 'Avenir', Helvetica, Arial, sans-serif;
+            color: #2c3e50;
+            margin-top: 60px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Contador: {{ count }}</h1>
+        <button v-on:click="count++">Incrementar</button>
+        <button v-on:click="count--">Decrementar</button>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                count: 0
+            }
+        })
+    </script>
+</body>
+</html>
